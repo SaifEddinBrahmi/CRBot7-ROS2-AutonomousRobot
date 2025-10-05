@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="crbot7" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Include all modular xacro files -->
+  <xacro:include filename="$(find crbot7)/description/robot_core.xacro"/>
+  <xacro:include filename="$(find crbot7)/description/lidar.xacro"/>
+  <xacro:include filename="$(find crbot7)/description/camera.xacro"/>
+  <xacro:include filename="$(find crbot7)/description/ros2_control.xacro"/>
+
+</robot>

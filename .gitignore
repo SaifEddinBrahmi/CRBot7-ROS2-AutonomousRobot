@@ -1,0 +1,99 @@
+# ROS2 and Colcon build artifacts
+build/
+install/
+log/
+*.pyc
+__pycache__/
+*.egg-info/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# C++
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# ROS
+devel/
+devel_isolated/
+*.bag
+*.bag.active
+CATKIN_IGNORE
+
+# Gazebo
+*.log
+*.world~
+
+# Build directories that might appear
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CTestTestfile.cmake
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation
+doc/
+docs/_build/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Map files (optional - uncomment if you want to ignore saved maps)
+# *.pgm
+# *.yaml
+# maps/
