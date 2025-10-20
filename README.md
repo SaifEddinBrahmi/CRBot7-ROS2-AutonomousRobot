@@ -1,15 +1,9 @@
 
 # CRBot7 - Autonomous Navigation Robot 🇵🇹
 
-**CR7-inspired autonomous mobile robot with Portugal colors - Because robots can have legendary moves too!** ⚽✨
+**CR7-inspired autonomous mobile robot - Because robots can have legendary moves too!** ⚽✨
 
 *"SIUUUU!"* - Just like Cristiano Ronaldo dominates the field, CRBot7 dominates autonomous navigation! 🚀
-
-[![GitHub](https://img.shields.io/badge/GitHub-CRBot7--ROS2--AutonomousRobot-blue?logo=github)](https://github.com/SaifEddinBrahmi/CRBot7-ROS2-AutonomousRobot)
-
-Developed by: **Saifeddin Brahmi** (saifeddin.brahmi@ensi-uma.tn)
-
-🔗 **Repository:** [https://github.com/SaifEddinBrahmi/CRBot7-ROS2-AutonomousRobot](https://github.com/SaifEddinBrahmi/CRBot7-ROS2-AutonomousRobot)
 
 ---
 
@@ -17,7 +11,6 @@ Developed by: **Saifeddin Brahmi** (saifeddin.brahmi@ensi-uma.tn)
 
 **CRBot7** is a high-performance differential drive mobile robot inspired by Portugal's greatest legend, Cristiano Ronaldo (CR7). Just like CR7's precision on the field, CRBot7 delivers:
 
-- 🔴 **Portugal Flag Colors**: Red chassis and green wheels representing Portuguese pride
 - 🎯 **Precision Navigation**: SLAM mapping and Nav2 path planning for warehouse automation
 - 📹 **Vision System**: 640x480 camera at 20Hz for real-time environment monitoring
 - 🌀 **360° Awareness**: Lidar sensor with 3.5m range for obstacle detection
@@ -29,13 +22,13 @@ Developed by: **Saifeddin Brahmi** (saifeddin.brahmi@ensi-uma.tn)
 
 ## ✨ Key Features
 
-- 🏆 **CL Performance**: Built with ROS2 Humble and Ignition Gazebo Fortress
-- 🇵🇹 **Portugal Theme**: Red & Green color scheme honoring CR7's homeland
+- 🏆 **Simulation Lab**: Built with ROS2 Humble and Ignition Gazebo Fortress
 - 🗺️ **Real-time SLAM**: Asynchronous mapping with slam_toolbox
 - 🧭 **Full Nav2 Stack**: DWB local planner with intelligent path planning
 - 🎮 **Keyboard Control**: Drive it like CR7 controls a football
 - 📷 **Live Camera Feed**: See what the robot sees in real-time
 - 🔧 **Modular Design**: Clean xacro-based URDF for easy customization
+- 🇵🇹 **Portugal Theme**: Red & Green color scheme honoring CR7's homeland
 
 ## 📋 Requirements
 - **ROS 2 Humble** (Ubuntu 22.04)
