@@ -67,10 +67,13 @@ source install/setup.bash
 
 ### 3. Launch the Complete System
 ```bash
-# Launch Gazebo simulation + Controllers + SLAM + Nav2 + RViz
+# Recommended: Launch with arena world (has walls for mapping)
+ros2 launch crbot7 complete_system.launch.py world_file:=arena.sdf
+
+# Alternative: Empty world (just ground - for basic testing)
 ros2 launch crbot7 complete_system.launch.py world_file:=empty.sdf
 
-# Alternative: Use bookstore world (requires AWS models)
+# Alternative: Bookstore world (complex environment - requires AWS models)
 ros2 launch crbot7 complete_system.launch.py world_file:=bookstore.sdf
 ```
 
@@ -139,8 +142,9 @@ CRBot7-ROS2-AutonomousRobot/
 │   ├── follow_waypoints.py          # Multi-waypoint navigation
 │   └── reach_goal.py                # Single goal navigation
 ├── worlds/                          # Gazebo world files
-│   ├── empty.sdf                    # Empty world
-│   └── bookstore.sdf                # Bookstore environment
+│   ├── empty.sdf                    # Empty world (just ground plane)
+│   ├── arena.sdf                    # Arena with walls (recommended for SLAM)
+│   └── bookstore.sdf                # Bookstore environment (requires AWS models)
 ├── .gitignore                       # Git ignore rules
 ├── CMakeLists.txt                   # Build configuration
 ├── package.xml                      # ROS2 package metadata
@@ -151,15 +155,22 @@ CRBot7-ROS2-AutonomousRobot/
 
 ### Complete System (Recommended)
 ```bash
-ros2 launch crbot7 complete_system.launch.py world_file:=empty.sdf
+# Best for autonomous navigation and SLAM mapping
+ros2 launch crbot7 complete_system.launch.py world_file:=arena.sdf
 ```
 Launches: Gazebo + Controllers + SLAM Toolbox + Nav2 + RViz
 
 ### Basic Display Only
 ```bash
-ros2 launch crbot7 display.launch.py world_file:=empty.sdf
+# For testing robot model and controllers only
+ros2 launch crbot7 display.launch.py world_file:=arena.sdf
 ```
 Launches: Gazebo + Controllers + RViz (no navigation)
+
+### Available Worlds
+- **arena.sdf** - Arena with walls (recommended for SLAM and navigation)
+- **empty.sdf** - Empty flat ground (basic testing only, no obstacles for mapping)
+- **bookstore.sdf** - Complex bookstore environment (requires AWS models)
 
 ## 🛠️ Advanced Usage
 
@@ -222,6 +233,8 @@ Automatic topic relays connect teleop to controller:
 - Ensure controllers are loaded: `ros2 control list_controllers`
 
 **No map building?**
+- Make sure you're using `arena.sdf` or `bookstore.sdf` (not empty.sdf)
+- Empty world has no obstacles for the lidar to detect
 - Check lidar data: `ros2 topic echo /scan`
 - Verify slam_toolbox is running: `ros2 node list`
 - Drive robot around to gather lidar data
