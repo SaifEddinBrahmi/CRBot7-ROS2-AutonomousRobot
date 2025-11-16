@@ -33,6 +33,8 @@ install(
 install(PROGRAMS
   scripts/reach_goal.py
   scripts/follow_waypoints.py
+  scripts/yolo_detector.py
+  scripts/object_follower.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
